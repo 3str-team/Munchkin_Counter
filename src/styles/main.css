@@ -1,0 +1,54 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  -webkit-tap-highlight-color: transparent;
+  user-select: none;
+}
+
+html,
+body {
+  width: 100%;
+  min-height: 100vh;
+}
+
+body {
+  background: var(--bgColor);
+  color: var(--textColor);
+  font-family: monospace;
+}
+
+#root {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  padding: 10px;
+}
+
+.App {
+  display: flex;
+  flex-direction: column;
+  gap: 0px;
+  justify-content: space-around;
+  height: 600px;
+  width: 100%;
+  max-width: 700px;
+}
+
+.App .counters {
+  display: flex;
+  gap: 0px;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.btn {
+  border: none;
+  background: transparent;
+  color: var(--textColor);
+  cursor: pointer;
+  border: 1px solid wheat;
+}
