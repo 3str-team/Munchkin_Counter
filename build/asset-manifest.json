@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/Munchkin_Counter/static/css/main.d327ddb2.css",
+    "main.js": "/Munchkin_Counter/static/js/main.6b754934.js",
+    "index.html": "/Munchkin_Counter/index.html",
+    "main.d327ddb2.css.map": "/Munchkin_Counter/static/css/main.d327ddb2.css.map",
+    "main.6b754934.js.map": "/Munchkin_Counter/static/js/main.6b754934.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.d327ddb2.css",
+    "static/js/main.6b754934.js"
+  ]
+}
