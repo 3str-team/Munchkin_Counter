@@ -2,13 +2,13 @@ import React, { useEffect, useState } from 'react';
 import Counter from './components/Counter/Counter';
 import Random from './components/Random/Random';
 import Total from './components/Total/Total';
+import { useStorageState } from './hooks/useStorageState';
 
 import './styles/app.css';
-import { useStorageStateNumber } from './hooks/useStorageStateNumber';
 
 function App() {
-	const [level, setLevel] = useStorageStateNumber(1, 'level');
-	const [items, setItems] = useStorageStateNumber(0, 'items');
+	const [level, setLevel] = useStorageState(1, 'level');
+	const [items, setItems] = useStorageState(0, 'items');
 	const [total, setTotal] = useState(Number(level) + Number(items));
 
 	useEffect(() => {
