@@ -7,7 +7,25 @@
 }
 
 .total .result {
+  position: relative;
   font-size: 100px;
+}
+
+.total__value {
+  max-width: 90vw;
+  overflow-x: auto;
+}
+
+.total .result .side-badge {
+  position: absolute;
+  top: -10px;
+  right: -35px;
+  font-size: 1.3rem;
+  background: wheat;
+  color: var(--bgColor);
+  padding: 3px 7px;
+  font-weight: 600;
+  border-radius: 7px;
 }
 
 .total .options {
@@ -41,7 +59,6 @@
   background: wheat;
   border-radius: 20px;
   cursor: pointer;
-  z-index: 5;
 }
 
 .total .options .iconsToggle::before {
