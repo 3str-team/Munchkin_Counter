@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useRef, useEffect } from "react";
 import { Input, Modal } from "../ui";
 import { useSideCountStore } from "../../store/sideStore";
 
@@ -6,6 +6,13 @@ export const SideCount = () => {
   const { side, setCount, resetCount } = useSideCountStore();
   const [inputValue, setInputValue] = useState("");
   const [isOpenModal, setIsOpenModal] = useState(false);
+  const inputRef = useRef(null);
+
+  useEffect(() => {
+    if (isOpenModal && inputRef.current) {
+      inputRef.current.focus();
+    }
+  }, [isOpenModal]);
 
   const handleClickSideCountBtn = () => {
     setIsOpenModal(true);
@@ -28,7 +35,7 @@ export const SideCount = () => {
     handleCloseModal();
   };
 
-  const handleCliclResetCount = () => {
+  const handleClickResetCount = () => {
     resetCount();
     handleCloseModal();
   };
@@ -47,11 +54,12 @@ export const SideCount = () => {
             className="side-count__modal__input"
             value={inputValue}
             onChange={handleChangeInput}
+            ref={inputRef}
           />
         </Modal.Body>
         <Modal.Footer>
           <div className="side-count__modal__actions">
-            <button className="btn" onClick={handleCliclResetCount}>
+            <button className="btn" onClick={handleClickResetCount}>
               Сбросить
             </button>
             <button className="btn" onClick={handleClickSaveCount}>
