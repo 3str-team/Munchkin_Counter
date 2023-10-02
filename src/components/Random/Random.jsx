@@ -35,33 +35,33 @@ const Random = () => {
   };
 
   return (
-    <div className="randomWrapper">
-      <div className="elements">
-        <button className="randomBtn" onClick={getRandomValue}>
-          <i className="bx bxs-dice-5"></i>
-        </button>
-        {randomValue ? (
-          <div className="value">
-            {randomValue !== -1 ? (
-              <div className="wrapper">
-                {randomValue}
-                <ProgressBar
-                  duration={duration}
-                  delay={10}
-                  onFinish={() => {
-                    setRandomValue(null);
-                  }}
-                />
-              </div>
-            ) : (
-              <div className="loader"></div>
-            )}
-          </div>
-        ) : (
-          ""
-        )}
-      </div>
-    </div>
+    <section className="randomWrapper">
+      {/* <div className="elements"> */}
+      <button className="randomBtn" onClick={getRandomValue}>
+        <i className="bx bxs-dice-5"></i>
+      </button>
+      {randomValue ? (
+        <div className="value">
+          {randomValue !== -1 ? (
+            <div className="wrapper">
+              {randomValue}
+              <ProgressBar
+                duration={duration}
+                delay={10}
+                onFinish={() => {
+                  setRandomValue(null);
+                }}
+              />
+            </div>
+          ) : (
+            <div className="loader"></div>
+          )}
+        </div>
+      ) : (
+        ""
+      )}
+      {/* </div> */}
+    </section>
   );
 };
 

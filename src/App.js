@@ -9,10 +9,12 @@ import "./styles/app.css";
 function App() {
   return (
     <div className="App">
-      <Random />
+      <header className="header">
+        <SideCount />
+        <Random />
+      </header>
       <Total />
       <Controls />
-      <SideCount />
     </div>
   );
 }
