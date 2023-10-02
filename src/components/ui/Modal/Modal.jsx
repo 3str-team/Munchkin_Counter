@@ -1,17 +1,29 @@
 import clsx from "clsx";
+import { useRef } from "react";
+import { Transition } from "react-transition-group";
 
 export const Modal = ({ children, isOpen, onClose }) => {
-  if (!isOpen) {
-    return null;
-  }
+  const modalRef = useRef(null);
 
   return (
-    <section className="modal__overlay">
-      <button className="modal__close btn" onClick={onClose}>
-        <i className="bx bx-x"></i>
-      </button>
-      <section className="modal__window">{children}</section>
-    </section>
+    <Transition
+      in={isOpen}
+      timeout={150}
+      classNames={"modal"}
+      nodeRef={modalRef}
+    >
+      {(state) => (
+        <section
+          className={clsx("modal__overlay", `modal-${state}`)}
+          ref={modalRef}
+        >
+          <button className="modal__close btn" onClick={onClose}>
+            <i className="bx bx-x"></i>
+          </button>
+          <section className="modal__window">{children}</section>
+        </section>
+      )}
+    </Transition>
   );
 };
 
