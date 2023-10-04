@@ -1,8 +1,7 @@
-import * as zustand from "zustand";
 import { act } from "@testing-library/react";
 
 const { create: actualCreate, createStore: actualCreateStore } =
-  jest.requireActual < typeof zustand > "zustand";
+  jest.requireActual;
 
 // a variable to hold reset functions for all stores declared in the app
 export const storeResetFns = new Set();
