@@ -45,7 +45,11 @@ export const SideCount = () => {
       <button className="side-count__btn btn" onClick={handleClickSideCountBtn}>
         Модификаторы
       </button>
-      <Modal isOpen={isOpenModal} onClose={handleCloseModal}>
+      <Modal
+        isOpen={isOpenModal}
+        onClose={handleCloseModal}
+        onOverlayClick={handleCloseModal}
+      >
         <Modal.Header>Модификаторы</Modal.Header>
         <Modal.Body className="side-count__modal__body">
           <Input
