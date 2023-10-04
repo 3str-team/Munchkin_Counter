@@ -21,7 +21,7 @@
     "deploy": "gh-pages -d build",
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "test": "react-scripts test",
+    "test": "jest",
     "eject": "react-scripts eject"
   },
   "eslintConfig": {
@@ -43,6 +43,11 @@
     ]
   },
   "devDependencies": {
-    "gh-pages": "^4.0.0"
+    "@babel/preset-env": "^7.22.20",
+    "@babel/preset-react": "^7.22.15",
+    "babel-jest": "^29.7.0",
+    "gh-pages": "^4.0.0",
+    "jest": "^27.5.1",
+    "react-test-renderer": "^18.2.0"
   }
 }
