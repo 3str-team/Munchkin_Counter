@@ -13,7 +13,7 @@ export const useLevelStore = create(
       incrementLevel: () => set((state) => ({ level: state.level + 1 })),
       decrementLevel: () =>
         set((state) => ({ level: Math.max(1, state.level - 1) })),
-      resetLevel: () => set((state) => ({ level: 1 })),
+      resetLevel: () => set(() => ({ level: 1 })),
     }),
     {
       alias: levelAlias,

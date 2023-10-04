@@ -12,7 +12,7 @@ export const useItemsStore = create(
       items: initialCache !== undefined ? JSON.parse(initialCache) : 0,
       incrementItems: () => set((state) => ({ items: state.items + 1 })),
       decrementItems: () => set((state) => ({ items: state.items - 1 })),
-      resetItems: () => set((state) => ({ items: 0 })),
+      resetItems: () => set(() => ({ items: 0 })),
     }),
     {
       alias: itemsAlias,
