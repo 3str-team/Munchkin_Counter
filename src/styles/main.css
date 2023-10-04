@@ -46,9 +46,16 @@ body {
 }
 
 .btn {
-  border: none;
   background: transparent;
   color: var(--textColor);
   cursor: pointer;
   border: 1px solid wheat;
+}
+
+.input {
+  outline: none;
+  padding: 6px 12px;
+  border: 1px solid wheat;
+  color: var(--textColor);
+  background: color-mix(in srgb, var(--bgColor) 95%, wheat);
 }

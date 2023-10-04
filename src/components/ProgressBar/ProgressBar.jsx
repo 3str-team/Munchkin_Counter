@@ -1,5 +1,4 @@
-import React from "react";
-import { useEffect } from "react";
+import React, { useEffect } from "react";
 import { useProgress } from "../../hooks/useProgress";
 
 const ProgressBar = ({ duration, delay, onFinish }) => {
@@ -9,7 +8,7 @@ const ProgressBar = ({ duration, delay, onFinish }) => {
     if (width <= 0) {
       onFinish();
     }
-  }, [width]);
+  }, [onFinish, width]);
 
   return <div className="progress" style={{ width: width + "%" }}></div>;
 };

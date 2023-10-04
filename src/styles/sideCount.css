@@ -1,0 +1,24 @@
+.side-count__btn {
+  padding: 8px 10px;
+  letter-spacing: 1px;
+}
+
+.side-count__modal__body {
+  padding-bottom: 15px;
+}
+
+.side-count__modal__input {
+  width: 100%;
+  font-size: 1.1rem;
+}
+
+.side-count__modal__actions {
+  display: flex;
+  gap: 7px;
+  justify-content: end;
+}
+
+.side-count__modal__actions .btn {
+  padding: 6px 8px;
+  font-size: 0.9rem;
+}
